@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 import sqlite3
-import init_db
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
@@ -30,6 +29,5 @@ def read_root():
         profile=profile
     )
 
-#if __name__ == "__main__":
-#    app.run(host="0.0.0.0", port=5000, use_reloader=True)
-    #app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, use_reloader=True)
